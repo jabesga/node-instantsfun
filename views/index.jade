@@ -1,0 +1,130 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title Instantsfun! Gordon Freeman approves!
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='Instantsfun! Sound buttons for every day use')
+    meta(name='keywords', content='button,sound,soundbutton,fun,tv,real life,games,sound games,soundboard,soundgrid,badumtss,chan,instant buttons, sound buttons,instantfun,instant fun,internetz,meme soundboard')
+    link(href='/css/style.css', rel='stylesheet')
+    link(rel='image_src', href='instantsfun.png')
+  body
+    audio#audio(src='' type='audio/mp3')
+    .navbar.navbar-inverse.navbar-fixed-top
+      .container-fluid(style="padding-left:20%;")
+        .navbar-header
+          button.navbar-toggle.collapsed(type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar")
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand.brand(href='/')
+            img(src='/css/bootstrap/img/logo.png')
+
+        .navbar-collapse.collapse(id="navbar" aria-expanded="false")
+          ul.nav.navbar-nav
+            li
+              a(href='/annoy/') Annoy!
+            li
+              a(href='/tv/') Da TV!
+            li
+              a(href='/game/') Games!
+            li
+              a(href='/internetz/') Internetz!
+            li.page_item.page-item-474
+              a(href='/last/') Last!
+            li.page_item.page-item-21
+              a(href='/movies/') Movies!
+            li.page_item.page-item-23
+              a(href='/music/') Music!
+            li.page_item.page-item-25
+              a(href='/real-life/') Real Life!
+          form.navbar-form.navbar-right(style="padding-right:30%;")
+            .form-group#searchform(method='get', action='/')
+                input.form-control#s(type='text', size='14', value='', name='s' style="margin-right: 5px")
+            button.btn.btn-default#searchsubmit(type='submit') Search
+          // /.nav-collapse
+    .instanty
+      img(src='/images/instanty/instanty_stop.png', style='float: right;')
+    .container
+      style(type='text/css').
+        .description{
+        display:none;
+        }
+      .superwrapper
+
+    .container
+      .row
+        .col-md-8
+          .left-panel
+            h1.catname Home!
+            .row
+              each sound in sounds_list
+                .col-md-2.button_cell.col-xs-15
+                  h2 #{sound.name}
+                  if sound.color
+                    -var button_image = '/css/images/boton' + sound.color + '.png'
+                    a(href='#' onclick="playSound('#{sound.name}','#{sound.url}')")
+                      img(align="center" src= button_image)                       
+        .col-md-4
+          .right-panel
+            h2#instantfun_logo_side(style='font-family: slapstick_bold; font-size:35px') InstantsFun!
+            .innersidebar(<h3='')
+              ul
+                li.page_item.page-item-30
+                  a(href='/favorites/') Favorites!
+                li.page_item.page-item-31
+                  a(href='/') Home!
+                li.page_item.page-item-474
+                  a(href='/last/') Last!
+                li.page_item.page-item-29
+                  a(href='/random/') Random!
+                li.page_item.page-item-444
+                  a(href='/testimonials/') Testimonials!
+              .textwidget
+                hr
+              .textwidget
+                center
+                  iframe(src='//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FInstantsFUN%2F115412211810642&\
+                  width=250&\
+                  height=274&\
+                  show_faces=true&colorscheme=light&stream=false&show_border=true&header=false', scrolling='no', frameborder='0', style='border:none; overflow:hidden;\
+                  width:250px;\
+                  height:274px;', allowtransparency='true')
+              .textwidget
+                hr
+              .textwidget
+                center
+                  a.twitter-timeline(data-dnt='true', href='https://twitter.com/search?q=instantsfun', data-widget-id='340553804497956864')  "instantsfun"
+                  script.
+                    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+      hr
+      footer
+        center
+          | Copyright © 2013 InstantsFun.es Team.
+          br
+          |     All Lefts Reserved.Company 2013.
+          br
+    // /container
+    script(type='text/javascript', src='https://code.jquery.com/jquery-2.2.0.js')
+    script(type='text/javascript', src='/css/bootstrap/js/bootstrap.js')
+    script.
+      function playSound(soundname, soundfile) {
+        if(document.getElementById(soundname) == undefined){
+          var audio = document.createElement("audio");
+          audio.setAttribute('id', soundname);
+          audio.setAttribute('src', soundfile);
+          audio.setAttribute('onended', 'remove_sound("' + soundname + '")');
+          document.body.appendChild(audio);
+          audio.play();
+        }
+        else{
+          remove_sound(soundname);
+        }
+      }
+
+      function remove_sound(soundname){
+        var elem = document.getElementById(soundname);
+        elem.parentNode.removeChild(elem);
+      }
+    

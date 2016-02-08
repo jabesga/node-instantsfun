@@ -1,0 +1,260 @@
+/*
+Theme Name: Instantsfun 3 Template
+Theme URI: www.instantsfun.es
+Description: Just an OP template for the new Instantsfun Site!
+Author: Instantsfun! team
+Author URI: http://www.instantsfun.es/
+Version: 1.0
+Tags: responsive, white, bootstrap
+
+License: Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
+License URI: http://creativecommons.org/licenses/by-sa/3.0/
+
+
+*/
+
+@import url('bootstrap/css/bootstrap.css'); 
+/*@import url('bootstrap/css/bootstrap-responsive.css'); */
+body { 
+background: #eaeaea; /* Old browsers */
+background: -moz-linear-gradient(top,  #eaeaea 0%, #f2f2f2 15%, #bfbfbf 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eaeaea), color-stop(15%,#f2f2f2), color-stop(100%,#bfbfbf)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #eaeaea 0%,#f2f2f2 15%,#bfbfbf 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #eaeaea 0%,#f2f2f2 15%,#bfbfbf 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #eaeaea 0%,#f2f2f2 15%,#bfbfbf 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #eaeaea 0%,#f2f2f2 15%,#bfbfbf 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#bfbfbf',GradientType=0 ); /* IE6-9 */
+
+}
+
+/* NO FUNCIONA NI HA FUNCIONADO NUNCA */
+@media only screen and (min-width: 924px){
+    .superwrapper{ margin-top: 70px; } /* background: url("/img/bg.png"); } */
+
+}
+@media only screen and (max-width: 924px){
+    .superwrapper{ margin-top: 70px; } /* background: url("<?php get_template_directory_uri(); ?>/img/bg.png"); } */
+
+}
+.col {
+	float:left;
+	width: 17%;
+	padding:5px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+	overflow:hidden;
+}
+	 @font-face {
+	font-family: slapstick_shaded;
+	src: url('/fonts/slapstick_shaded.ttf');
+}
+	 @font-face {
+	font-family: slapstick_bold;
+	src: url('/fonts/slapstick_bold.ttf');
+}
+.error404{
+padding:20px;
+}
+.catname{
+	font-size: 30.5px;
+	font-family: slapstick_bold;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: black;
+	color: white;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	text-decoration: none;
+	color: rgb(189, 31, 31);
+	text-shadow: 3px 2px 5px #888;
+}
+.innersidebar{
+	padding: 10px;
+}
+.span4 h2{
+	color: rgb(189, 31, 31);
+	text-shadow: 3px 2px 5px #888;
+}
+h2#instantfun_logo_side{
+	color: rgb(189, 31, 31);
+	text-shadow: 3px 2px 5px #888;
+	-webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+.innersidebar li{
+	font-family: slapstick_bold;
+	font-size: 22px;
+	line-height: 28px;
+	text-align: center;
+}
+.innersidebar li:link,:visited;:focus{
+	color:#b70100;
+}
+.innersidebar a{
+	color:#b70100;
+}
+.innersidebar a:hover{
+	color:#8A0100;
+	}
+.topad{
+	margin-top: 10px;
+}
+.bottomad{
+	padding-top:20px;
+}
+@media only screen and (max-width: 924px){
+    .topad,.bottomad,.sidebarad,{ display: none; }
+    ._4s7c,.twtr-doc,.yop-poll-container{
+    	width:150px;
+    }
+}
+@media only screen and (max-width: 1200px){
+	ul.navbar-form.pull-right { display: none; }
+}
+/*.wpfp-span{
+	margin: auto;
+padding: 20px;
+	display: block;
+	margin-bottom: 40px;
+	margin-left: 60px;
+	position: absolute;
+	margin-top: -120px;
+}*/
+.description{
+	width: 75%;
+	margin: auto;
+	text-align: center;
+}
+/*.wpfp-span li,*/.thePosts li{
+	width: 150px;
+	margin-top: 6px;
+	/*min-height: 160px;
+	/*border: 1px solid #000;*/
+	display: inline-block;
+	vertical-align: top;
+    font-family: slapstick_bold;
+    text-align: center;
+    font-size: 20.5px;
+}
+.thePosts a:link{
+	color:	#b70100;
+}
+.thePosts a:hover, :focus{
+	color: #8A0100;
+}
+
+
+/*ThePostsLast*/
+.thePostsLast{
+	padding: 30px 30px;
+}
+.thePostsLast li{
+	width: 170px;
+	margin-top: -18px;
+	display: inline-block;
+	vertical-align: top;
+    font-family: slapstick_bold;
+    text-align: center;
+    font-size: 20.5px;
+}
+.thePostsLast a:link{
+	color:	#b70100;
+}
+.thePostsLast a:hover, :focus{
+	color: #8A0100;
+}
+
+/*ThePostsLast Ending*/
+a.wpfp-link{
+	margin-top:25px;
+}
+img.wpfp-img{
+	display: none;
+}
+.removefav{
+	float: right;
+	margin-top: 25px;
+	margin-right: 75%;
+}/*
+body {
+	font-size: 100%;
+}*/
+#layout{
+	padding: 10px;
+}
+.instanty{
+	width: 20%;
+	bottom: 0;
+	right: 0;
+	position: fixed;
+	z-index: 999999;
+}
+.reroll{
+	float:right;
+	margin-right: 25px;
+	margin-top: -150px;
+}
+.reroll p{
+	text-align: center;
+}
+#disqus_thread {
+	padding:15px;
+	margin-bottom:-10px;
+}
+.more-link {
+	/*display: none;*/
+}
+.capsule{
+	width:150px;
+	height: 160px;
+}
+.audiojs{
+	height:87px;
+}
+.span8{
+	word-wrap: break-word;
+}
+.left-panel {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #D0D0D0;
+    background-color: #F9F9F9;
+    padding-bottom: 10%;
+    overflow: hidden;
+}
+.right-panel {
+	text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #D0D0D0;
+    background-color: #F9F9F9;
+}
+h2 {
+    font-size: 20.5px;
+    text-align: center;
+    font-family: slapstick_bold;
+    text-decoration: none;
+    color: rgb(189, 31, 31);
+}
+.button_cell{
+	display: block;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+.elContenido ul{
+	list-style-type: none;
+}
+.removeFav{
+	font-size: 18px;
+}
+.innersidebar li{
+	list-style-type: none;
+}
+.theArticle{
+	word-wrap: break-word;
+	padding: 20px;
+}
+.col-xs-15{
+    width:20%;
+}
