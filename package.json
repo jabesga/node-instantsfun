@@ -9,6 +9,7 @@
   "author": "Jon Ander Besga",
   "license": "ISC",
   "dependencies": {
+    "csv-parse": "^1.0.1",
     "express": "^4.13.4",
     "jade": "^1.11.0",
     "mongoose": "4.4.1",

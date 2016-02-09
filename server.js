@@ -18,6 +18,7 @@ app.set('views', path.join(__dirname, 'views'));
 var site = require('./app/site');
 
 app.get('/', site.index);
+app.get('/import', site.import_csv);
 app.get(/\/(.+)/, site.filter);
 
 // Initialize server

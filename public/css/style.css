@@ -27,6 +27,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaeaea', end
 
 }
 
+
+
 /* NO FUNCIONA NI HA FUNCIONADO NUNCA */
 @media only screen and (min-width: 924px){
     .superwrapper{ margin-top: 70px; } /* background: url("/img/bg.png"); } */
@@ -237,6 +239,7 @@ h2 {
     color: rgb(189, 31, 31);
 }
 .button_cell{
+    height: 100%;
 	display: block;
 	text-align: center;
 	margin-left: auto;
@@ -258,3 +261,8 @@ h2 {
 .col-xs-15{
     width:20%;
 }
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }

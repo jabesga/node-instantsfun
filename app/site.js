@@ -27,6 +27,37 @@ module.exports = {
             }
             res.render('index', data);
         });
+    },
+
+    import_csv : function(req, res){
+        var fs = require('fs');
+        var parse = require('csv-parse');
+    
+        var parser = parse({delimiter: ','}, function(err, data){
+            var sounds_list = [];
+            data.filter(function(element){
+                var sound = new Sounds({
+                    'name': element[0],
+                    'color': element[1],
+                    'category': element[2],
+                    'url': element[3],
+                });
+                sounds_list.push(sound);
+            });
+
+            Sounds.create(sounds_list, function(err, inserted){
+                if(err){
+                    throw err;
+                    console.log(err);
+                }
+                else{
+                    res.redirect('/');
+                }
+            });
+
+        });
+
+        fs.createReadStream('./scraping/scraped_database.csv').pipe(parser);
     }
     /*
     error_development : function(err, req, res, next) {

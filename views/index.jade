@@ -60,12 +60,12 @@ html(lang='en')
             h1.catname Home!
             .row
               each sound in sounds_list
-                .col-md-2.button_cell.col-xs-15
+                .col-md-2.col-xs-15
                   h2 #{sound.name}
                   if sound.color
                     -var button_image = '/css/images/boton' + sound.color + '.png'
                     a(href='#' onclick="playSound('#{sound.name}','#{sound.url}')")
-                      img(align="center" src= button_image)                       
+                      img(src= button_image)                       
         .col-md-4
           .right-panel
             h2#instantfun_logo_side(style='font-family: slapstick_bold; font-size:35px') InstantsFun!
