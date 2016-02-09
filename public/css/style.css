@@ -260,9 +260,15 @@ h2 {
 }
 .col-xs-15{
     width:20%;
+    height: 160px;
 }
-.center-block {
+
+.col-xs-15 a img{
     display: block;
     margin-left: auto;
     margin-right: auto;
- }
+}
+
+.col-xs-15 h2{
+    height: 42px;
+}

@@ -6,7 +6,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/Instantfun');
+mongoose.connect('mongodb://localhost/Instantsfun');
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(__dirname + '/public/favicon.ico'));
