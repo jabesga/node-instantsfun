@@ -1,9 +1,13 @@
 var express = require('express');
 var app = express();
-var port = process.env.PORT || '3000';
+var port = process.env.PORT || '3002';
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
+
+var compress = require('compression');
+
+app.use(compress());  
 
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/Instantsfun');
