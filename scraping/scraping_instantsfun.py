@@ -3,7 +3,7 @@ import requests
 
 from tqdm import tqdm
 
-print 'Downloading data from website...'
+print ('Downloading data from website...')
 
 page = requests.get('http://www.instantsfun.es/')
 tree = html.fromstring(page.content)
@@ -12,12 +12,12 @@ colors = tree.xpath('//*[@id="instant_buttons"]//@class')
 categories = tree.xpath('/html/body/div[3]/div/div/div[1]/div[2]/ul/li/div[2]/a/@href')
 sound_urls = tree.xpath('/html/body/div[3]/div/div/div[1]/div[2]/ul/li/div/audio/source/source/@src')
 
-print '\tDownload complete!'
+print ('\tDownload complete!')
 
-print 'Generating .csv file...'
+print ('Generating .csv file...')
 
 if len(names) == len(colors) == len(categories) == len(sound_urls):
-    
+
     f = open('scraped_database.csv', 'w')
     f.write('name,color,category,sound_url\n')
 
@@ -28,15 +28,15 @@ if len(names) == len(colors) == len(categories) == len(sound_urls):
 
     f.close()
 
-    print '\tFile resourced created!'
+    print ('\tFile resourced created!')
 
-    print 'Downloading sound files from website...'
+    print ('Downloading sound files from website...')
 
     URL_PREFIX = 'http://www.instantsfun.es'
 
     for element in range(0, len(sound_urls)):
         filename = sound_urls[element].split('/')[2]
-        print 'Downloading ' + filename
+        print ('Downloading ' + filename)
         url = URL_PREFIX + sound_urls[element]
         response = requests.get(url, stream=True)
 
